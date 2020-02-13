@@ -1,3 +1,4 @@
+﻿using OCPLibrary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +11,27 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            List<PersonModel> applicants = new List<PersonModel>
+            {
+                new PersonModel { FirstName = "Tim", LastName = "Corey" },
+                new PersonModel { FirstName = "Sue", LastName = "Storm" },
+                new PersonModel { FirstName = "Nancy", LastName = "Roman" }
+            };
 
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+            List<EmployeeModel> employees = new List<EmployeeModel>();
+            Accounts accountProcessor = new Accounts();
+
+            foreach (var person in applicants)
+            {
+                employees.Add(accountProcessor.Create(person));
+            }
+
+            foreach (var emp in employees)
+            {
+                Console.WriteLine($"{ emp.FirstName } { emp.LastName }: { emp.EmailAddress } IsManager: { emp.IsManager } IsExecutive: { emp.IsExecutive }");
+            }
+
+            Console.ReadLine();
         }
     }
 }
