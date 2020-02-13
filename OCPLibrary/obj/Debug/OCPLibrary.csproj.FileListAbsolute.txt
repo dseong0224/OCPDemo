@@ -1,0 +1,6 @@
+C:\Users\daniel.seong\SideProjects\OCPDemo\OCPLibrary\bin\Debug\OCPLibrary.dll
+C:\Users\daniel.seong\SideProjects\OCPDemo\OCPLibrary\bin\Debug\OCPLibrary.pdb
+C:\Users\daniel.seong\SideProjects\OCPDemo\OCPLibrary\obj\Debug\OCPLibrary.csprojAssemblyReference.cache
+C:\Users\daniel.seong\SideProjects\OCPDemo\OCPLibrary\obj\Debug\OCPLibrary.csproj.CoreCompileInputs.cache
+C:\Users\daniel.seong\SideProjects\OCPDemo\OCPLibrary\obj\Debug\OCPLibrary.dll
+C:\Users\daniel.seong\SideProjects\OCPDemo\OCPLibrary\obj\Debug\OCPLibrary.pdb
