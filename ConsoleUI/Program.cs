@@ -11,10 +11,10 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            List<PersonModel> applicants = new List<PersonModel>
+            List<IApplicantModel> applicants = new List<IApplicantModel>
             {
                 new PersonModel { FirstName = "Tim", LastName = "Corey" },
-                new PersonModel { FirstName = "Sue", LastName = "Storm" },
+                new ManagerModel { FirstName = "Sue", LastName = "Storm" },
                 new PersonModel { FirstName = "Nancy", LastName = "Roman" }
             };//made a list and added three people
             
@@ -24,7 +24,7 @@ namespace ConsoleUI
             //made new account that can return an employee given a person model
             foreach (var person in applicants)
             {
-                employees.Add(accountProcessor.Create(person)); //each person is added as employee
+                employees.Add(person.AccountProcessor.Create(person)); //each person is added as employee
             }
 
             foreach (var emp in employees)
